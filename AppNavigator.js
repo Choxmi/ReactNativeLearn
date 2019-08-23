@@ -3,7 +3,11 @@ import Home from './Home';
 import Friends from './Friends'
 
 const AppNavigator = createStackNavigator({
-  Home: { screen: Home },
+  Home: { screen: Home,
+          navigationOptions: {
+            headerTitle: 'Home'
+          },
+        },
   Friends: { screen: Friends }
 });
 

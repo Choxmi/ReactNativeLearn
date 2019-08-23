@@ -13,9 +13,14 @@ import HomeScreen from './HomeScreen';
 import Friends from './Friends';
 
 const AppNavigator = createStackNavigator({
-  Home: HomeScreen,
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: () => ({
+      header: null,
+    }),
+  },
   Friends: Friends
-});
+},);
 
 const AppContainer = createAppContainer(AppNavigator);
 
