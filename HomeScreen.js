@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import { Text, Button, View, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import SearchText from './SearchText'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +11,6 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     left: 0,
-    justifyContent: 'flex-end',
     alignItems: 'center'
   },
   map: {
@@ -41,15 +41,7 @@ class HomeScreen extends React.Component {
           showsMyLocationButton={true}
         >
         </MapView>
-        <Text>
-          Text Is Appearing
-        </Text>
-        <Button
-        title="Add some friends"
-        onPress={() =>
-          this.props.navigation.navigate('Friends')
-        }
-        />
+        <SearchText/>
       </View>
   )
       }
