@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
         top: 50,
         width: "80%",
         height: "10%",
-        backgroundColor: '#fff',
+        backgroundColor: '#302d2d',
+        borderRadius:50,
         elevation: 10
     }
 });

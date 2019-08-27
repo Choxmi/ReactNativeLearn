@@ -9,8 +9,8 @@
 import React, {Fragment} from 'react';
 import { Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import HomeScreen from './HomeScreen';
-import Friends from './Friends';
+import HomeScreen from './src/screens/HomeScreen';
+import Friends from './src/screens/Friends';
 
 const AppNavigator = createStackNavigator({
   Home: {

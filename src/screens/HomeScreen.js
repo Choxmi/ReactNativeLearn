@@ -1,8 +1,25 @@
 import React, {Fragment} from 'react';
-import { Text, Button, View, StyleSheet } from 'react-native';
+import { Text, Button, View, StyleSheet, Alert } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import SearchText from './SearchText'
+import SearchText from '../comps/SearchText'
+import { db } from '../config';
+
+let addItem = item => {
+  db.ref('/items').push({
+    name: item
+  });
+};
+
+state = {
+  name: 'dfrer'
+};
+
+handleChange = e => {
+  this.setState({
+    name: e.nativeEvent.text
+  });
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -41,7 +58,17 @@ class HomeScreen extends React.Component {
           showsMyLocationButton={true}
         >
         </MapView>
-        <SearchText/>
+        {/* <SearchText/> */}
+        <Button
+          onPress={() => {
+            console.debug("bcgfghf"); 
+            var item = addItem("fgdgfdgfd");
+            alert(GeoFire(db));
+          }}
+          title="Learn More"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />
       </View>
   )
       }
